@@ -5,22 +5,17 @@
     }
 
     body {
-        background-image: url('img/fundo.jpg');
-        background-size: cover;
-        /* Faz a imagem cobrir toda a área */
-        background-position: center;
-        /* Centraliza a imagem */
-        background-repeat: no-repeat;
-        /* Não repete a imagem */
-        background-attachment: fixed;
-        /* (Opcional) Fixa a imagem ao rolar a página */
-        height: 100vh;
-        /* Garante que a altura do body ocupe toda a tela */
-        margin: 0;
-        background-color: black;
-        color: #fff;
-        margin: 50px;
-    }
+    background-image: url('img/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh; /* Use min-height em vez de height fixo */
+    margin: 0; /* Removido os 50px fixos */
+    background-color: black;
+    color: #fff;
+    overflow-x: hidden; /* Evita rolagem lateral indesejada */
+}
 
     body.home-page::before {
         content: "";
