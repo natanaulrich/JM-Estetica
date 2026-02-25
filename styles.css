@@ -1,0 +1,220 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-image: url('img/fundo.jpg');
+        background-size: cover;
+        /* Faz a imagem cobrir toda a área */
+        background-position: center;
+        /* Centraliza a imagem */
+        background-repeat: no-repeat;
+        /* Não repete a imagem */
+        background-attachment: fixed;
+        /* (Opcional) Fixa a imagem ao rolar a página */
+        height: 100vh;
+        /* Garante que a altura do body ocupe toda a tela */
+        margin: 0;
+        background-color: black;
+        color: #fff;
+        margin: 50px;
+    }
+
+    body.home-page::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        background-image: url('img/fundo.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        /* Aplica o desfoque */
+        filter: blur(2px);
+        /* Aumenta a escala para não aparecer bordas brancas no desfoque */
+        transform: scale(1.1);
+    }
+
+    /* Container para organizar seus textos e dar o espaçamento que você queria */
+    .home-page {
+        padding: 50px;
+        box-sizing: border-box;
+    }
+
+    /* Estilo para melhorar a leitura sobre o fundo */
+    .paragrafo-inicio,
+    .paragrafo-inicio1,
+    .paragrafo-inicio2 {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        max-width: 800px;
+        /* Evita que o texto fique muito largo em telas grandes */
+    }
+
+    .logo-inicio {
+        display: block;
+        height: 40vh;
+        width: auto;
+        /* Mantém a proporção da imagem */
+        margin: 0 auto;
+    }
+
+
+
+    .especial {
+        font-family: 'Dancing Script', cursive;
+        color: #FFB6C1;
+        text-align: center;
+        margin-top: -10px;
+        font-size: clamp(50px, 10vw, 120px);
+        /* Aumentei um pouco para dar mais presença */
+        font-weight: 700;
+        /* O valor máximo para negrito em fontes web */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        /* Opcional: uma sombra bem leve para destacar no fundo */
+    }
+
+    .link-container {
+        text-decoration: none;
+        /* Remove o sublinhado do link */
+        display: block;
+        /* Faz com que toda a área do texto seja clicável */
+        transition: opacity 0.3s;
+        /* Adiciona um efeito suave ao passar o mouse */
+    }
+
+    .link-container:hover {
+        opacity: 0.8;
+        /* Dá um leve feedback visual de que é clicável */
+    }
+
+    p.especial {
+        font-family: 'Dancing Script', cursive;
+        color: #FFB6C1;
+        text-align: center;
+        margin-top: -10px;
+        font-size: clamp(30px, 6vw, 70px);
+        /* Aumentei um pouco para dar mais presença */
+        font-weight: 700;
+        /* O valor máximo para negrito em fontes web */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        /* Opcional: uma sombra bem leve para destacar no fundo */
+    }
+
+    h2 {
+        font-family: 'Dancing Script', cursive;
+        color: #FFB6C1;
+        text-align: center;
+        font-size: 100px;
+        /* Mantive o tamanho que você pediu */
+        font-weight: 700;
+        /* Peso máximo da fonte */
+
+        /* TRUQUE PARA NEGRITO EXTRA: */
+        /* Adiciona uma borda fina da mesma cor para 'engrossar' o traço */
+        -webkit-text-stroke: 2px #FFB6C1;
+
+        /* Sombra suave para dar mais impacto e não parecer 'chapado' */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+        margin-bottom: 20px;
+        /* Espaçamento opcional abaixo do título */
+    }
+
+    figcaption {
+        font-family: arial;
+        font-weight: 700;
+        /* Define o peso máximo carregado */
+        text-align: center;
+        color: #FFB6C1;
+        font-size: 18px;
+        margin-top: 10px;
+        -webkit-text-stroke: 1px #FFB6C1;
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.05);
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    .paragrafo-inicio {
+        color: #b9838b;
+        font-weight: bold;
+        font-size: 80px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .paragrafo-inicio1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: clamp(25px, 4vw, 40px);
+        /* Reduzido de 50px/80px para 40px */
+        letter-spacing: 0.1em;
+        color: #FFB6C1;
+        font-weight: bold;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .h3 {
+        color: #b9838b;
+        font-weight: bold;
+        font-size: 80px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    section {
+        display: grid;
+        place-items: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .hidden {
+        opacity: 0;
+        filter: blur(15px);
+        transform: translateX(-100%);
+        transition: all 2s;
+    }
+
+    .show {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateX(0);
+        transition: all 2s;
+    }
+
+    .logos {
+        display: flex;
+        gap: 10px;
+    }
+
+    .avatar {
+        height: 200px;
+        background-color: #fff;
+        border-radius: 10px;
+        margin: 5px;
+    }
+
+    .logos :nth-child(2) {
+        transition-delay: 400ms;
+    }
+
+    .logos :nth-child(3) {
+        transition-delay: 700ms;
+    }
+
+    .logos :nth-child(4) {
+        transition-delay: 1000ms;
+    }
+
+    .logos :nth-child(5) {
+        transition-delay: 1200ms;
+    }
